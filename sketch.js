@@ -7,7 +7,7 @@
 ***********************************************************************************/
 
 // Global Variables
-var gDebugMode = false;
+var gDebugMode = true;
 var ellipseXPos = 0;
 var ellipseYPos = 300;
 var ellipseDist = 40;
@@ -20,10 +20,10 @@ var yPos =300;
 // Setup code goes here
 function setup() {
   createCanvas(1000, 800);
-  console.log("Starting up Simple Shapes");
+  console.log("Starting up code self portrait");
   rectMode(CENTER);
   ellipseMode(CENTER);
-  textsize(24);
+  textSize(24);
   textAlign(LEFT);
 
   console.log("Width = " + width);
@@ -64,6 +64,12 @@ function draw() {
     }
   }*/
   
+}
+
+function keyTyped(){
+  if(key === ' '){
+    gDebugMode = !gDebugMode;
+  }
 }
 
 function drawDebugInfo(){
