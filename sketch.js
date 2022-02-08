@@ -1,15 +1,10 @@
 /***********************************************************************************
-  SimpleShapes
-  by Scott Kildall
+  Code Self Portrait
+  by Hannah Gabany
 
-  Sketch for drawing some very simple shapes
+  Coded self portrait
 
 ***********************************************************************************/
-
-// Single line comment
-/*
-multiline comment
-*/
 
 // Global Variables
 var ellipseXPos = 0;
