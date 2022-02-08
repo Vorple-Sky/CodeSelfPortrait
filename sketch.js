@@ -7,6 +7,7 @@
 ***********************************************************************************/
 
 // Global Variables
+var gDebugMode = false;
 var ellipseXPos = 0;
 var ellipseYPos = 300;
 var ellipseDist = 40;
@@ -22,6 +23,8 @@ function setup() {
   console.log("Starting up Simple Shapes");
   rectMode(CENTER);
   ellipseMode(CENTER);
+  textsize(24);
+  textAlign(LEFT);
 
   console.log("Width = " + width);
   console.log("Height = " + height);
@@ -37,6 +40,10 @@ function draw() {
   background(34,50,204);
   fill(225);
   noStroke();
+
+  if(gDebugMode == ture ){
+    drawDebugInfo();
+  }
 
   drawRedEllipse(xPos,yPos,100);
   xPos += XSpeed;
@@ -57,6 +64,11 @@ function draw() {
     }
   }*/
   
+}
+
+function drawDebugInfo(){
+  fill(225);
+  text("X: " + mouseX + "  Y:" + mouseY, 20, height - 20);
 }
 
 function drawRedEllipse(x,y,w) {
