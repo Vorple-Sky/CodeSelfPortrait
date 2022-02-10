@@ -16,7 +16,7 @@ function preload(){
 
 // Setup code goes here
 function setup() {
-  createCanvas(1000, 800);
+  createCanvas(1000, 735);
   console.log("Starting up code self portrait");
   rectMode(CENTER);
   ellipseMode(CENTER);
