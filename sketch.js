@@ -32,7 +32,7 @@ function setup() {
 // Draw code goes here
 function draw() {
   background(132,143,165);
-  image(img1,0,0, 1000, 800);//reference image
+  //image(img1,0,0, 1000, 800);//reference image
   noStroke();
   
   if(gDebugMode == true ){
@@ -40,9 +40,13 @@ function draw() {
   }
 
   //series of functions to draw portrait
-  drawHair();
+  drawNeck();
   drawHead();
-
+  drawHair();
+  drawEyes();
+  drawNose();
+  drawMouth();
+  
   
 }
 
@@ -79,6 +83,24 @@ function drawHead(){
   pop();
 }
 
+//neck shape
+function drawNeck(){
+  push();
+  stroke(0);
+  strokeWeight(2);
+  strokeJoin(ROUND);
+  fill(231,216,201);
+  beginShape();
+  vertex(444, 481);
+  vertex(443, 548);
+  vertex(477, 561);
+  vertex(526, 548);
+  vertex(522, 478);
+  endShape();
+  pop();
+
+}
+
 //hair shape
 function drawHair(){
   push();
@@ -87,5 +109,90 @@ function drawHair(){
   strokeJoin(ROUND);
   fill(96,70,59);
   beginShape();
-  vertex();
+  vertex(482, 210);
+  vertex(370, 285);
+  vertex(369, 392);
+  vertex(396, 459);
+  vertex(444, 481);
+  vertex(443, 548);
+  vertex(349, 548);
+  vertex(349,252);
+  vertex(482, 170);
+  vertex(623,252);
+  vertex(623, 548);
+  vertex(526, 548);
+  vertex(522, 478);
+  vertex(563, 458);
+  vertex(598,391);
+  vertex(605,285);
+  vertex(482, 210);
+  endShape();
+  pop();
+
+}
+
+function drawEyes(){
+  push();
+  stroke(0);
+  strokeWeight(2);
+  strokeJoin(ROUND);
+  fill(225,225,225);
+  ellipse(430,314,55,30);
+  ellipse(532,314,55,30);
+  fill(41,82,74);
+  ellipse(430,314,30,30);
+  ellipse(532,314,30,30);
+  fill(0,0,0);
+  ellipse(430,314,15,20);
+  ellipse(532,314,15,20);
+  fill(225,225,225);
+  ellipse(420,310,10,5);
+  ellipse(522,310,10,5);
+  strokeWeight(0);
+  fill(96,70,59);
+  rect(425,280,50,8);
+  triangle(400,276,400,284,389,290);
+  rect(534,280,50,8);
+  triangle(558,276,558,284,571,290);
+  pop();
+
+}
+
+function drawNose(){
+  push();
+  stroke(0);
+  strokeWeight(0.5);
+  strokeJoin(ROUND);
+  fill(197,175,160);
+  beginShape();
+  vertex(464,374);
+  vertex(464,380);
+  vertex(477,384);
+  vertex(495,380);
+  vertex(495,374);
+  vertex(477,378);
+  vertex(464,374);
+  endShape();
+  pop();
+
+}
+function drawMouth(){
+  push();
+  stroke(0);
+  strokeWeight(0.5);
+  strokeJoin(ROUND);
+  fill(223,146,142);
+  beginShape();
+  vertex(477,413);
+  vertex(490, 411);
+  vertex(511,416);
+  vertex(490,430);
+  vertex(467,430);
+  vertex(447,416);
+  vertex(465,411);
+  vertex(477,413);
+  endShape();
+  line(447,416,511,416);  
+  pop(); 
+
 }
