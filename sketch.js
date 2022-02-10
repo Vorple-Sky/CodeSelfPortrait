@@ -8,11 +8,7 @@
 
 // Global Variables
 var gDebugMode = false;
-let img; // Declare variable 'img'
 
-function preload(){
-  img1 = loadImage("Depression.png")
-}
 
 // Setup code goes here
 function setup() {
@@ -32,7 +28,6 @@ function setup() {
 // Draw code goes here
 function draw() {
   background(132,143,165);
-  //image(img1,0,0, 1000, 800);//reference image
   noStroke();
   
   if(gDebugMode == true ){
