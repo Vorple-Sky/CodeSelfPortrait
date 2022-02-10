@@ -38,31 +38,13 @@ function setup() {
 // Draw code goes here
 function draw() {
   background(34,50,204);
-  fill(225);
+  fill(240, 120,0);
   noStroke();
 
-  if(gDebugMode == ture ){
+  if(gDebugMode == true ){
     drawDebugInfo();
   }
-
-  drawRedEllipse(xPos,yPos,100);
-  xPos += XSpeed;
-  yPos += YSpeed;
-
-  if( xPos > width || xPos < 0){
-    XSpeed = -XSpeed;
-  }
- 
-  if(yPos > height || yPos < 0){
-    YSpeed = -YSpeed;
-  }
-
-
-  /*for( let i = 0; i < 8; i++){
-    for( let j = 0; j < 10; j++){
-      drawRedEllipse(60 + (i*200), 60 +(j*100), 60 +(i*15));
-    }
-  }*/
+  ellipse(width/2, height/2, 200, 100);
   
 }
 
