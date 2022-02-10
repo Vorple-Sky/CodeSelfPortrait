@@ -18,7 +18,7 @@ function setup() {
   ellipseMode(CENTER);
   textSize(24);
   textAlign(LEFT);
-
+  
   console.log("Width = " + width);
   console.log("Height = " + height);
 
