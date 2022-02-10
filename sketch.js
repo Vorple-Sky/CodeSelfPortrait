@@ -52,6 +52,7 @@ function keyTyped(){
   }
 }
 
+//debug function
 function drawDebugInfo(){
   fill(225);
   text("X: " + mouseX + "  Y:" + mouseY, 20, height - 20);
@@ -126,6 +127,7 @@ function drawHair(){
 
 }
 
+//eye shape
 function drawEyes(){
   push();
   stroke(0);
@@ -153,6 +155,7 @@ function drawEyes(){
 
 }
 
+//nose shape
 function drawNose(){
   push();
   stroke(0);
@@ -171,6 +174,8 @@ function drawNose(){
   pop();
 
 }
+
+//mouth shape
 function drawMouth(){
   push();
   stroke(0);
